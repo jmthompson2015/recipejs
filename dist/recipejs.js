@@ -269,22 +269,10 @@
     return resourceData.name;
   };
 
-  // import BooleanOperator from "./artifact/BooleanOperator.js";
-
-  // import FilterUI from "./view/FilterUI.js";
-  // import FilterGroupUI from "./view/FilterGroupUI.js";
-
   class RecipeJS {}
 
-  // FilterJS.BooleanOperator = BooleanOperator;
-  // FilterJS.ClauseType = ClauseType;
-  // FilterJS.NumberOperator = NumberOperator;
-  // FilterJS.StringOperator = StringOperator;
   RecipeJS.InputValidator = InputValidator;
 
-  // FilterJS.Clause = Clause;
-  // FilterJS.Filter = Filter;
-  // FilterJS.FilterGroup = FilterGroup;
   RecipeJS.IngredientData = IngredientData;
   RecipeJS.RecipeData = RecipeData;
   RecipeJS.ResourceData = ResourceData;
