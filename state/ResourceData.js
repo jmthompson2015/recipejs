@@ -1,19 +1,15 @@
+import Immutable from "seamless-immutable";
+
 import IV from "../utility/InputValidator.js";
 
 const ResourceData = {};
 
-ResourceData.create = ({
-  imageUrl,
-  key,
-  name,
-  value = 0,
-  clientProps = {},
-}) => {
+ResourceData.create = ({ image, key, name, value = 0, clientProps = {} }) => {
   IV.validateIsString("name", name);
   const myKey = key || name;
 
   return Immutable({
-    imageUrl,
+    image,
     key: myKey,
     name,
     value,
