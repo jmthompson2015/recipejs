@@ -1,4 +1,4 @@
-import Immutable$1 from 'seamless-immutable';
+import Immutable from 'seamless-immutable';
 
 /* eslint no-console: ["error", { allow: ["error"] }] */
 
@@ -103,14 +103,21 @@ Object.freeze(IngredientData);
 
 const RecipeData = {};
 
-RecipeData.create = ({ inputs, key, name, outputs, clientProps = {} }) => {
+RecipeData.create = ({
+  inputs,
+  fabricators,
+  key,
+  name,
+  outputs,
+  clientProps = {},
+}) => {
   InputValidator.validateIsArray("inputs", inputs);
-  InputValidator.validateIsString("name", name);
   InputValidator.validateIsArray("outputs", outputs);
   const myKey = key || name;
 
   return Immutable({
     inputs,
+    fabricators,
     key: myKey,
     name,
     outputs,
@@ -126,7 +133,7 @@ ResourceData.create = ({ image, key, name, value = 0, clientProps = {} }) => {
   InputValidator.validateIsString("name", name);
   const myKey = key || name;
 
-  return Immutable$1({
+  return Immutable({
     image,
     key: myKey,
     name,

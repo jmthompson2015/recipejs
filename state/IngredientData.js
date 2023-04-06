@@ -1,3 +1,5 @@
+import Immutable from "seamless-immutable";
+
 import IV from "../utility/InputValidator.js";
 
 const IngredientData = {};
